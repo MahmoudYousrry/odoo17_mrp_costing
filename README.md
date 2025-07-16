@@ -17,7 +17,7 @@ This custom Odoo module extends the Manufacturing (MRP) module to allow estimati
 ## 📷 Screenshots
 
 ### 1. Costing Tab in Manufacturing Order Form
-![Costing Tab](screenshots/cost_tab.png)
+![Costing Tab](screenshots/costing_tab.png)
 
 ### 3. PDF Report
 ![PDF Report](screenshots/pdf_report.png)
