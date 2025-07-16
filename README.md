@@ -1,0 +1,1 @@
+# odoo17_mrp_costing
