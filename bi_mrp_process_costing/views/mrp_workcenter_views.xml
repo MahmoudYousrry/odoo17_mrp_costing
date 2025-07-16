@@ -1,0 +1,15 @@
+<odoo>
+    <record id="view_mrp_workcenter_form_costing" model="ir.ui.view">
+        <field name="name">mrp.workcenter.form.costing</field>
+        <field name="model">mrp.workcenter</field>
+        <field name="inherit_id" ref="mrp.mrp_workcenter_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group" position="inside">
+                <group string="Costing Information" col="2">
+                    <field name="labor_cost_per_hour"/>
+                    <field name="overhead_cost_per_hour"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,42 @@
+<odoo>
+    <record id="view_mrp_production_form_costing" model="ir.ui.view">
+        <field name="name">mrp.production.form.costing</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Costing">
+                    <sheet>
+                        <group>
+                            <field name="estimated_material_cost"/>
+                            <field name="estimated_labor_cost"/>
+                            <field name="estimated_overhead_cost"/>
+                            <field name="estimated_total_cost"/>
+                        </group>
+                    </sheet>
+                    <sheet>
+                        <group>
+                            <field name="actual_material_cost"/>
+                            <field name="actual_labor_cost"/>
+                            <field name="actual_overhead_cost"/>
+                            <field name="actual_total_cost"/>
+                        </group>
+                    </sheet>
+                    <sheet>
+                        <group>
+                            <field name="cost_difference"/>
+                        </group>
+                    </sheet>
+
+                    <div style="text-align: center; margin-top: 15px;">
+                        <button name="%(bi_mrp_process_costing.report_mrp_costing)d"
+                                string="Print Cost Report"
+                                type="action"
+                                class="btn btn-primary"
+                                icon="fa-file-pdf-o"/>
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

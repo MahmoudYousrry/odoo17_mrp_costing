@@ -1,0 +1,36 @@
+<odoo>
+
+    <template id="report_mrp_costing_template">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="doc">
+                <div class="page">
+                    <h2>Manufacturing Costing Report</h2>
+                    <p><strong>MO Reference:</strong> <t t-esc="doc.name"/></p>
+                    <p><strong>Product:</strong> <t t-esc="doc.product_id.display_name"/></p>
+                    <p><strong>Quantity:</strong> <t t-esc="doc.product_qty"/> <t t-esc="doc.product_uom_id.name"/></p>
+                    <br/>
+
+                    <h4>Estimated Costs</h4>
+                    <ul>
+                        <li>Material: <t t-esc="doc.estimated_material_cost"/> </li>
+                        <li>Labor: <t t-esc="doc.estimated_labor_cost"/> </li>
+                        <li>Overhead: <t t-esc="doc.estimated_overhead_cost"/> </li>
+                        <li><strong>Total: <t t-esc="doc.estimated_total_cost"/></strong></li>
+                    </ul>
+
+                    <h4>Actual Costs</h4>
+                    <ul>
+                        <li>Material: <t t-esc="doc.actual_material_cost"/> </li>
+                        <li>Labor: <t t-esc="doc.actual_labor_cost"/> </li>
+                        <li>Overhead: <t t-esc="doc.actual_overhead_cost"/> </li>
+                        <li><strong>Total: <t t-esc="doc.actual_total_cost"/></strong></li>
+                    </ul>
+
+                    <h4>Difference</h4>
+                    <p><strong>Cost Difference:</strong> <t t-esc="doc.cost_difference"/></p>
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>

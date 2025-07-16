@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mrp_production_costing,mrp.production.costing,model_mrp_production,,1,1,1,1
+access_mrp_workcenter_costing,mrp.workcenter.costing,model_mrp_workcenter,,1,1,1,1
